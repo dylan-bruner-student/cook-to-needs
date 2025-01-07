@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/cook-to-needs/static/css/main.9f8b0227.css",
-    "main.js": "/cook-to-needs/static/js/main.ac7fd873.js",
+    "main.js": "/cook-to-needs/static/js/main.de407396.js",
     "index.html": "/cook-to-needs/index.html",
     "main.9f8b0227.css.map": "/cook-to-needs/static/css/main.9f8b0227.css.map",
-    "main.ac7fd873.js.map": "/cook-to-needs/static/js/main.ac7fd873.js.map"
+    "main.de407396.js.map": "/cook-to-needs/static/js/main.de407396.js.map"
   },
   "entrypoints": [
     "static/css/main.9f8b0227.css",
-    "static/js/main.ac7fd873.js"
+    "static/js/main.de407396.js"
   ]
 }
