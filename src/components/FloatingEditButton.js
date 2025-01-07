@@ -3,7 +3,7 @@ export function FloatingEditButton({ onClick }) {
     <button
       onClick={onClick}
       style={{
-        borderRadius: "60px",
+        borderRadius: "50%",
         border: "3px solid grey",
         backgroundColor: "grey",
         color: "white",
