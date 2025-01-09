@@ -21,7 +21,15 @@ export class DataPage extends React.Component {
             color: "white"
           }}
         >
-          <table>
+          <table border={1} 
+          style={{ 
+            margin: "auto",
+            marginTop: "50px",
+            borderCollapse: "collapse",
+            width: "80%",
+            textAlign: "center" 
+          }}
+          >
             <thead>
               <tr>
                 <th>Name</th>
@@ -43,7 +51,18 @@ export class DataPage extends React.Component {
             </tbody>
           </table>
   
-          <button onClick={this.onClickedClearData}>Clear Data</button>
+          <button onClick={this.onClickedClearData} style={{ 
+            display: "block", 
+            margin: "auto", 
+            backgroundColor: "red",
+            color: "white",
+            padding: "10px",
+            marginTop: "10px",
+            border: "none",
+            cursor: "pointer",
+            borderRadius: "5px"
+          }}
+            >Clear Data</button>
         </div>
       );
     }

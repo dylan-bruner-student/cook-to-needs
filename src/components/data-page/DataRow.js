@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./datarow.css";
 
 export class DataRow extends Component {
   constructor(props) {
@@ -25,65 +24,23 @@ export class DataRow extends Component {
   }
 
   render() {
+    const rows = ["4-5", "5-6", "6-7", "7-8", "8-9", "9-10", "10-11"];
+    
     return (
       <tr className={`data-row-${this.props.name}`}>
         <td>{this.props.name}</td>
-        <td>
-          <input
-            className="data-input row-4-5"
-            placeholder="0.0"
-            value={this.state.rowData["4-5"] || ""}
-            onChange={(e) => this.onValueChange("4-5", e.target.value)}
-          />
-        </td>
-        <td>
-          <input
-            className="data-input row-5-6"
-            placeholder="0.0"
-            value={this.state.rowData["5-6"] || ""}
-            onChange={(e) => this.onValueChange("5-6", e.target.value)}
-          />
-        </td>
-        <td>
-          <input
-            className="data-input row-6-7"
-            placeholder="0.0"
-            value={this.state.rowData["6-7"] || ""}
-            onChange={(e) => this.onValueChange("6-7", e.target.value)}
-          />
-        </td>
-        <td>
-          <input
-            className="data-input row-7-8"
-            placeholder="0.0"
-            value={this.state.rowData["7-8"] || ""}
-            onChange={(e) => this.onValueChange("7-8", e.target.value)}
-          />
-        </td>
-        <td>
-          <input
-            className="data-input row-8-9"
-            placeholder="0.0"
-            value={this.state.rowData["8-9"] || ""}
-            onChange={(e) => this.onValueChange("8-9", e.target.value)}
-          />
-        </td>
-        <td>
-          <input
-            className="data-input row-9-10"
-            placeholder="0.0"
-            value={this.state.rowData["9-10"] || ""}
-            onChange={(e) => this.onValueChange("9-10", e.target.value)}
-          />
-        </td>
-        <td>
-          <input
-            className="data-input row-10-11"
-            placeholder="0.0"
-            value={this.state.rowData["10-11"] || ""}
-            onChange={(e) => this.onValueChange("10-11", e.target.value)}
-          />
-        </td>
+        {rows.map((row) => (
+          <td key={row}>
+            <input
+              className={`data-input row-${row}`}
+              placeholder="0.0"
+              value={this.state.rowData[row] || ""}
+              type="number"
+              onChange={(e) => this.onValueChange(row, e.target.value)}
+              style={{ width: "25px", textAlign: "center", backgroundColor: "#18181a", color: "white", border: "none", outline: "none", padding: "0.7em" }}
+            />
+          </td>
+        ))}
       </tr>
     );
   }

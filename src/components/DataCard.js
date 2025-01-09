@@ -1,20 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import "./datacard.css";
 
 export class DataCard extends React.Component {
   render() {
     const storedData = JSON.parse(localStorage.getItem("data") || "{}");
     var data = storedData[this.props.name] || {};
-    console.log(data);
 
     const currentTime = new Date();
-    const currentHours = currentTime.getHours();
+    const currentHours = currentTime.getHours() - 12;
     const currentMinutes = currentTime.getMinutes();
 
     var rawFood = 0;
 
     for (let timeSlot in data) {
-      let [start, end] = timeSlot.split("-").map(Number);
+      let [start] = timeSlot.split("-").map(Number);
 
       // Check if the current time is within or after the end time of the slot
       if (currentHours <= start) {
@@ -25,12 +24,9 @@ export class DataCard extends React.Component {
     var partialAmount = 0;
     if (currentHours !== 11) {
       const amt = parseFloat(data[`${currentHours}-${currentHours + 1}`]);
-      console.log(amt);
       partialAmount = -amt;
       partialAmount += amt * ((60 - currentMinutes) / 60);
-      console.log(partialAmount);
       partialAmount /= this.props.divisor;
-      console.log(`${this.props.name} ${partialAmount}`);
     }
 
     const pansByTheHour = rawFood / this.props.divisor;

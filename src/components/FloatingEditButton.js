@@ -4,8 +4,8 @@ export function FloatingEditButton({ onClick }) {
       onClick={onClick}
       style={{
         borderRadius: "50%",
-        border: "3px solid grey",
-        backgroundColor: "grey",
+        border: "3px solid #003b49",
+        backgroundColor: "#003b49",
         color: "white",
         position: "fixed",
         bottom: "20px",
