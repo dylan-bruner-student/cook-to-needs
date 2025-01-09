@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FloatingEditButton } from './components/FloatingEditButton'
+import { FloatingEditButton } from "./components/FloatingEditButton";
 import { DataPage } from "./components/data-page/DataPage";
 import { DataCard } from "./components/DataCard";
 

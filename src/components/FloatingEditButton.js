@@ -12,6 +12,8 @@ export function FloatingEditButton({ onClick }) {
         right: "20px",
         padding: "10px",
         cursor: "pointer",
+        width: "50px",
+        height: "50px",
       }}
     >
       <span className="material-symbols-outlined">edit</span>
