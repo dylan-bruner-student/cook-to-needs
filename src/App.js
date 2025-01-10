@@ -18,8 +18,8 @@ function App() {
       <DataCard name="Chicken" divisor={5} />
       <DataCard name="Steak" divisor={5} />
       <DataCard name="Brisket" divisor={1} />
-      <DataCard name="Brown" divisor={1} />
       <DataCard name="White" divisor={1} />
+      <DataCard name="Brown" divisor={1} />
     </div>
   );
 }
